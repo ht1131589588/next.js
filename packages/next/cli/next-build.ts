@@ -46,6 +46,7 @@ const nextBuild: cliCommand = (argv) => {
     )
   }
   if (args['--profile']) {
+    // 分析已启用。 注意：这可能会影响性能
     Log.warn('Profiling is enabled. Note: This may affect performance')
   }
   const dir = resolve(args._[0] || '.')

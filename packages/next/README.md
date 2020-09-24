@@ -15,9 +15,9 @@
   </a>
 </p>
 
-## Getting Started
+## 入门
 
-Visit <a aria-label="next.js learn" href="https://nextjs.org/learn">https://nextjs.org/learn</a> to get started with Next.js.
+访问 <a aria-label="next.js learn" href="https://nextjs.org/learn">https://nextjs.org/learn</a> 以开始使用Next.js.
 
 ## Documentation
 

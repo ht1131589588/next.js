@@ -25,6 +25,7 @@ const commands: { [command: string]: () => Promise<cliCommand> } = {
     await import('../cli/next-telemetry').then((i) => i.nextTelemetry),
 }
 
+// 定义所有命令标识
 const args = arg(
   {
     // Types
@@ -41,12 +42,15 @@ const args = arg(
   }
 )
 
+// 版本号
+// 使用Taskr构建管道将版本内联到文件中
 // Version is inlined into the file using taskr build pipeline
 if (args['--version']) {
   console.log(`Next.js v${process.env.__NEXT_VERSION}`)
   process.exit(0)
 }
 
+// 检测是否在运行`next <subcommand>` or `next`
 // Check if we are running `next <subcommand>` or `next`
 const foundCommand = Boolean(commands[args._[0]])
 

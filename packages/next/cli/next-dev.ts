@@ -115,8 +115,10 @@ const nextDev: cliCommand = (argv) => {
   )
     .then(async (app) => {
       startedDevelopmentServer(appUrl)
+      // 服务器侦听后开始预检，然后忽略错误：
       // Start preflight after server is listening and ignore errors:
       preflight().catch(() => {})
+      // // 完成服务器启动：
       // Finalize server bootup:
       await app.prepare()
     })
